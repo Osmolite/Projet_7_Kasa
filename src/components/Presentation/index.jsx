@@ -1,0 +1,1 @@
+//Contient Slideshow, Tag ainsi que le titre, la localisation du logement et Owner dans la page Product

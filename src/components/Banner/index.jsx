@@ -1,0 +1,1 @@
+//Bannière de l'image pour la page Home et About

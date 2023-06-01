@@ -1,0 +1,1 @@
+//Tags des logements sur la page Product sous la localisation
