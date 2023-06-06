@@ -1,1 +1,0 @@
-//Nom, prénom, image et notation du propriétaire du logement

@@ -1,16 +1,15 @@
-//Components : Header, Banner, Collapse, Footer
+//Components : Header, Error, Footer
 // import logo from './logo.svg';
 // import './App.css';
 
-function About() {
+function ErrorPage() {
   return (
     <div className="App">
       <Header/>
-      <Banner/>
-      <Collapse/>
+      <Error/>
       <Footer/>
     </div>
   );
 }
 
-export default About;
+export default ErrorPage;

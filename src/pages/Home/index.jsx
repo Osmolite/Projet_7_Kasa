@@ -1,26 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import GlobalFonts from '../../fonts/fonts';
+import Header from '../../components/Header/index.jsx'
+import Banner from '../../components/Banner/index.jsx'
+import Cards from '../../components/Cards/index.jsx'
 
 function Home() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalFonts/>
+      <Header/>
+      <Banner/>
+      <Cards/>
+      {/* <Banner/>
+      <Cards/>
+      <Footer/> */}
     </div>
   );
 }
 
 export default Home;
-//Components : Header, Banner, Cards, Card
+//Components : Header, Banner, Cards, Card, Footer
