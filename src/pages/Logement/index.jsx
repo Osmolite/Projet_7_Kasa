@@ -2,13 +2,17 @@
 import GlobalFonts from '../../fonts/fonts';
 import Header from '../../components/Header/index.jsx'
 import Banner from '../../components/Banner/index.jsx'
+import { useParams } from 'react-router';
+import Slideshow from '../../components/Slideshow/index'
 
-function Product() {
+function Logement() {
+  const {id} = useParams();
   return (
     <div >
       <GlobalFonts/>
       <Header/>
       <Banner/>
+      <Slideshow id={id}/>
       {/* <Banner/>
       <Cards/>
       <Footer/> */}
@@ -16,4 +20,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default Logement;

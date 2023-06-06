@@ -14,10 +14,10 @@ const CardsStyle = styled.span`
     justify-content: center;
     align-items: center;
     background-color: #F6F6F6;
-    padding: 40px;
     width: 80%;
+    margin-inline: 17%;
     border-radius: 25px;
-    width: 1240px;
+    max-width: 1240px;
     .Card{
         height:340px;
         width:340px;
@@ -34,7 +34,7 @@ function Cards () {
     return (
         <CardsStyle>
             {logements.map(({ id, title, cover}) =>
-						<Link to='../../pages/Product/index.jsx'className='Card' key={id}>
+						<Link to={'./logement/'+ id} className='Card' key={id}>
 							<Card
 								title={title}
 								cover={cover}>

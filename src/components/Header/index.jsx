@@ -9,7 +9,8 @@ const HeaderStyle = styled.span`
     font-family: Montserrat;
     display: flex;
     justify-content: space-between;
-    margin: 50px;
+    margin-block: 50px;
+    margin-inline:17%;
     img {
         height: 87px;
         width:228px;
