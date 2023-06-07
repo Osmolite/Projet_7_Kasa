@@ -12,7 +12,7 @@ function Logement() {
       <GlobalFonts/>
       <Header/>
       <Banner/>
-      <Slideshow id={id}/>
+      <Slideshow _id={id}/>
       {/* <Banner/>
       <Cards/>
       <Footer/> */}

@@ -1,13 +1,14 @@
-//Components : Header, Banner, Collapse, Footer
-// import logo from './logo.svg';
-// import './App.css';
+import GlobalFonts from '../../fonts/fonts';
+import Header from '../../components/Header/index.jsx'
+import Banner from '../../components/Banner/index.jsx'
+import Footer from '../../components/Footer/index.jsx'
 
 function About() {
   return (
-    <div className="App">
+    <div >
+      <GlobalFonts/>
       <Header/>
       <Banner/>
-      <Collapse/>
       <Footer/>
     </div>
   );

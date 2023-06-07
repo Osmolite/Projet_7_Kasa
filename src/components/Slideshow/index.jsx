@@ -11,11 +11,20 @@ const SlideshowStyle = styled.span`
 //Couleurs : FF6060 FFFFFF F6F6F6 000000
 //Police : Montserrat regular, medium
 
-function Slideshow (id) {
-   const found = logements.find(element => element.id = id);
+// function findElementById(logements, _id) {
+//     return logements.find((element) => {
+//       return element.id === _id;
+//     })
+//   }
+
+function Slideshow (_id) {
+    console.log(_id);
+    const idRecherche = JSON.stringify(_id);
+   const found = logements.find((element)=>(element.id === idRecherche));
+   console.log(found);
     return (
         <div>
-        <img src={found.cover} alt='Logement'></img>
+        {/* <img src={found.cover} alt='Logement'></img> */}
         </div>
     )
 }

@@ -46,7 +46,7 @@ function Header () {
         <img className="logo" src={Logo} alt="Logo de l'application"></img>
         <div className="nav">
             <Link className="liens_Menu" to="/">Accueil</Link>
-            <Link className="liens_Menu" to="/">A Propos</Link>
+            <Link className="liens_Menu" to="/About">A Propos</Link>
         </div>
         </HeaderStyle>
     )
