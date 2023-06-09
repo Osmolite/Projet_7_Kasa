@@ -14,7 +14,7 @@ const FooterStyle = styled.span`
     color: #FFFFFF;
     width: 100%;
     margin-top:40px;
-    padding-block: 40px;
+    padding-block: 30px;
     img {
         width:200px;
     }

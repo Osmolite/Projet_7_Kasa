@@ -11,7 +11,7 @@ const ErrorStyle = styled.span`
     align-items:center;
     font-family: Montserrat;
     color: #FF6060;
-    margin-block:90px;
+    margin-block:100px;
     .messageErreur {
         font-size: 36px;
     }

@@ -1,9 +1,14 @@
 //Components : Header, Slideshow, Tag, Owner, Presentation, Collapse, Footer
 import GlobalFonts from '../../fonts/fonts';
 import Header from '../../components/Header/index.jsx'
-import Banner from '../../components/Banner/index.jsx'
 import { useParams } from 'react-router';
-import Slideshow from '../../components/Slideshow/index'
+import Presentation from '../../components/Presentation';
+
+// const containerStyles = {
+//   width: "500px",
+//   height: "280px",
+//   margin: "0 auto",
+// };
 
 function Logement() {
   const {id} = useParams();
@@ -11,11 +16,10 @@ function Logement() {
     <div >
       <GlobalFonts/>
       <Header/>
-      <Banner/>
+      <Presentation/>
+      {/* <div style={containerStyles}>
       <Slideshow _id={id}/>
-      {/* <Banner/>
-      <Cards/>
-      <Footer/> */}
+      </div> */}
     </div>
   );
 }

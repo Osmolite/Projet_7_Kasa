@@ -4,6 +4,11 @@ import Home from './pages/Home/index'
 import Logement from './pages/Logement/index'
 import About from './pages/About/index'
 import ErrorPage from './pages/ErrorPage/index'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fas)
+
 
 function App () {
     return (
