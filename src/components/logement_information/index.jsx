@@ -29,8 +29,20 @@ const InfoStyle = styled.span `
         flex-direction:row;
     }
     .tags{
+        display:flex;
+        
+    }
+    .tag{
+        width: 180px;
+        margin-inline: 5px;
+        padding-block: 5px;
         background-color: #FF6060;
         color: #FFFFFF;
+        border-radius: 25px;
+        text-align: center;
+    }
+    .rating{
+        display:flex;
     }
 `
 
@@ -45,22 +57,38 @@ function Info ({ title, location, description, host, tags, rating, equipments })
             content: `${equipments}`,
         }
       ]
-      console.log(typeof(infoCollapse))
+      console.log(tags)
+      const rows = [];
+        for (let i = 0; i < 5; i++) {
+            console.log(i,rating);
+            if (i<rating){
+                rows.push(<FontAwesomeIcon icon="fa-solid fa-star" />)
+            }else{
+                rows.push(<FontAwesomeIcon icon="fa-solid fa-star" style={{color: "#b0b0b0",}} />)
+            };
+        }
     return (
         <InfoStyle>
         <div className="descriptionEtOwner">
         <div className="information">
         <h1>{title}</h1>
         <h3>{location}</h3>
-        <p className="tags">{tags}</p>
+        <div className="tags">
+        {tags.map((tag)=>(
+            <p className="tag">{tag}</p>
+            ))}
+        </div>
         </div>
         <div className="owner">
             <div className="ownerIn">
             <h3>{host.name}</h3>
             <img src={host.picture} alt='Propriétaire du logement'></img>
             </div>
-            <div>{rating}</div>
-            <span><FontAwesomeIcon icon="fa-solid fa-star" /></span>
+            <div className="rating">
+            {rows.map((row)=>(
+                <div>{row}</div>
+                ))}
+            </div>
             </div>
             </div>
             <Collapse data = {infoCollapse} className='collapse'/>
