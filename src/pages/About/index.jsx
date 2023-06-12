@@ -10,7 +10,7 @@ function About() {
       <GlobalFonts/>
       <Header/>
       <Banner/>
-      <Collapse data={infoPageAbout}/>
+      <Collapse data={infoPageAbout} verticale={true}/>
       <Footer/>
     </div>
   );

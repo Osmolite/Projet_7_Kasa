@@ -24,10 +24,6 @@ const InfoStyle = styled.span `
     img{
         border-radius: 100%;
     }
-    .collapse {
-        display:flex;
-        flex-direction:row;
-    }
     .tags{
         display:flex;
         
@@ -57,6 +53,7 @@ function Info ({ title, location, description, host, tags, rating, equipments })
             content: `${equipments}`,
         }
       ]
+      console.log(infoCollapse)
       console.log(tags)
       const rows = [];
         for (let i = 0; i < 5; i++) {
@@ -74,8 +71,8 @@ function Info ({ title, location, description, host, tags, rating, equipments })
         <h1>{title}</h1>
         <h3>{location}</h3>
         <div className="tags">
-        {tags.map((tag)=>(
-            <p className="tag">{tag}</p>
+        {tags.map((tag,i)=>(
+            <p className="tag" key={i}>{tag}</p>
             ))}
         </div>
         </div>
@@ -85,13 +82,13 @@ function Info ({ title, location, description, host, tags, rating, equipments })
             <img src={host.picture} alt='Propriétaire du logement'></img>
             </div>
             <div className="rating">
-            {rows.map((row)=>(
-                <div>{row}</div>
+            {rows.map((row,i)=>(
+                <div key={i}>{row}</div>
                 ))}
             </div>
             </div>
             </div>
-            <Collapse data = {infoCollapse} className='collapse'/>
+            <Collapse data = {infoCollapse} verticale = {false} />
         </InfoStyle>
     )
 }

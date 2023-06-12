@@ -3,6 +3,7 @@ import GlobalFonts from '../../fonts/fonts';
 import Header from '../../components/Header/index.jsx'
 import { useParams } from 'react-router';
 import Presentation from '../../components/Presentation';
+import Footer from '../../components/Footer';
 
 // const containerStyles = {
 //   width: "500px",
@@ -17,6 +18,7 @@ function Logement() {
       <GlobalFonts/>
       <Header/>
       <Presentation/>
+      <Footer/>
       {/* <div style={containerStyles}>
       <Slideshow _id={id}/>
       </div> */}

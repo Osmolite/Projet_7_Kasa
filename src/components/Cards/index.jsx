@@ -15,7 +15,8 @@ const CardsStyle = styled.span`
     align-items: center;
     background-color: #F6F6F6;
     width: 80%;
-    margin-inline: 17%;
+    margin-left: auto;
+    margin-right:auto;
     border-radius: 25px;
     max-width: 1240px;
     .Card{
