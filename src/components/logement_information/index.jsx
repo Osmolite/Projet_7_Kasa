@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Collapse from "../Collapse";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ImageSlider from "../Slideshow";
 
 const InfoStyle = styled.span `
     font-family: Montserrat;
@@ -42,7 +43,7 @@ const InfoStyle = styled.span `
     }
 `
 
-function Info ({ title, location, description, host, tags, rating, equipments }) {
+function Info ({ title, location, description, host, tags, rating, equipments, pictures }) {
     const infoCollapse = [
         {
             title: 'Description',
@@ -64,8 +65,16 @@ function Info ({ title, location, description, host, tags, rating, equipments })
                 rows.push(<FontAwesomeIcon icon="fa-solid fa-star" style={{color: "#b0b0b0",}} />)
             };
         }
+        const containerStyles = {
+            width: "500px",
+            height: "280px",
+            margin: "0 auto",
+          };
     return (
         <InfoStyle>
+        <div style={containerStyles}>
+        <ImageSlider slides={pictures}/>
+        </div>
         <div className="descriptionEtOwner">
         <div className="information">
         <h1>{title}</h1>

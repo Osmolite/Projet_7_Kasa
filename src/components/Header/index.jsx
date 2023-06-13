@@ -26,8 +26,7 @@ const HeaderStyle = styled.span`
     }
     @media (max-width: 768px) {
         img {
-            width:50%;
-            height:50%;
+            width:50px;
         }
         
       }
