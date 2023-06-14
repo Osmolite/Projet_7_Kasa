@@ -58,8 +58,41 @@ const CollapseStyle = styled.span`
     color: #ff6060;
     height: auto;
     max-height: 9999px;
-    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+    transition: all 0.5s cubic-bezier(1, 0, 0, 0);
     white-space: pre-line;
+  }
+  @media (max-width: 768px) {
+    margin-block: 0px;
+    width:333px;
+    .accordionV{
+      margin-block: 90px;
+    }
+    .itemV {
+      width: 335px;
+      margin-bottom: 15px;
+    }
+    .accordionH {
+      margin-block: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .itemH {
+      width: 335px;
+      margin-bottom: 15px;}
+    .title {
+      height: 30px;
+      font-size: 13px;
+      border-radius:5px;
+    }
+    .content{
+      font-size: 12px;
+    }
+    .content.show{
+      font-size: 12px;
+    }
   }
 `
 //Couleurs : FF6060 FFFFFF F6F6F6 000000

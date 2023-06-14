@@ -41,6 +41,13 @@ const InfoStyle = styled.span `
     .rating{
         display:flex;
     }
+    @media (max-width: 768px) {
+        margin 0px;
+        width: 400px;
+        .descriptionEtOwner{
+            flex-direction:column;
+        }
+    }
 `
 
 function Info ({ title, location, description, host, tags, rating, equipments, pictures }) {

@@ -26,8 +26,10 @@ const HeaderStyle = styled.span`
     }
     @media (max-width: 768px) {
         img {
-            width:50px;
+            height:60px;
+            width:157px;
         }
+        margin-inline: 0px;
         
       }
     

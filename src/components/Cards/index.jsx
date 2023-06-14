@@ -26,6 +26,10 @@ const CardsStyle = styled.span`
     margin: 15px;
     text-decoration: none;
   }
+  @media (max-width: 768px) {
+    background-color: #FFFFFF;
+    margin-top: 0px;
+  }
 `
 // const [logements, setLogements] = useState([])
 

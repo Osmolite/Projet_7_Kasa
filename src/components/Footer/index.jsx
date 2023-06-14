@@ -22,9 +22,10 @@ const FooterStyle = styled.span`
     }
     @media (max-width: 768px) {
         img {
-            width:50%;
-            height:50%;
+            width:105px;
+            height:45px;
         }
+        font-size: 12px;
         
       }
     

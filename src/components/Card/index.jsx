@@ -40,6 +40,14 @@ const CardStyle = styled.span`
         opacity: 0.4;
         border-radius: 25px;
     }
+    @media (max-width: 768px) {
+        img{
+            border-radius:10px;
+        }
+        .degrade{
+            border-radius:10px;
+        }
+      }
 `
 // .shadow {
 //     height:340px;
