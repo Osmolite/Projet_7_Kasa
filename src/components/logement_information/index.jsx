@@ -12,27 +12,54 @@ const InfoStyle = styled.span `
     justify-content:center;
     margin: 0 auto;
     .descriptionEtOwner{
+        margin-top: 10px;
         display:flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        width: 1240px;
+    }
+    h1{
+        font-size:36px;
+        margin-bottom: 0px;
+    }
+    h3 {
+        font-size: 18px;
+        font-weight: 300;
+        white-space: pre-line;
+    }
+    .location{
+        margin-block: 4px;
+    }
+    .name{
+        margin-right: 25px;
     }
     .owner {
         display:flex;
         flex-direction:column;
+        margin-top: 10px;
     }
     .ownerIn {
         display:flex;
+        text-align: right;
+        margin-left : 30px;
+        margin-bottom: 10px;
     }
     img{
+        object-fit:cover;
+        margin-top: 10px;
         border-radius: 100%;
+        width: 64px;
+        height: 64px;
     }
     .tags{
         display:flex;
         
     }
     .tag{
-        width: 180px;
+        font-size: 14px;
+        width: 115px;
+        height: 25px;
         margin-inline: 5px;
-        padding-block: 5px;
+        padding-top: 5px;
         background-color: #FF6060;
         color: #FFFFFF;
         border-radius: 25px;
@@ -40,6 +67,10 @@ const InfoStyle = styled.span `
     }
     .rating{
         display:flex;
+        font-size: 26px;
+    }
+    .star {
+        margin-inline: 5px;
     }
     @media (max-width: 768px) {
         margin 0px;
@@ -73,10 +104,11 @@ function Info ({ title, location, description, host, tags, rating, equipments, p
             };
         }
         const containerStyles = {
-            width: "500px",
-            height: "280px",
+            width: "1240px",
+            height: "415px",
             margin: "0 auto",
           };
+          const name = host.name.replace(' ', '\n')
     return (
         <InfoStyle>
         <div style={containerStyles}>
@@ -85,7 +117,7 @@ function Info ({ title, location, description, host, tags, rating, equipments, p
         <div className="descriptionEtOwner">
         <div className="information">
         <h1>{title}</h1>
-        <h3>{location}</h3>
+        <h3 className="location">{location}</h3>
         <div className="tags">
         {tags.map((tag,i)=>(
             <p className="tag" key={i}>{tag}</p>
@@ -94,16 +126,17 @@ function Info ({ title, location, description, host, tags, rating, equipments, p
         </div>
         <div className="owner">
             <div className="ownerIn">
-            <h3>{host.name}</h3>
+            <h3 className="name">{name}</h3>
             <img src={host.picture} alt='Propriétaire du logement'></img>
             </div>
             <div className="rating">
             {rows.map((row,i)=>(
-                <div key={i}>{row}</div>
+                <div className="star" key={i}>{row}</div>
                 ))}
             </div>
             </div>
             </div>
+            
             <Collapse data = {infoCollapse} verticale = {false} />
         </InfoStyle>
     )

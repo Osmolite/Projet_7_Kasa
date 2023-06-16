@@ -18,48 +18,54 @@ const CollapseStyle = styled.span`
   .accordionH {
     display: flex;
     justify-content: space-between;
-    margin-block: 200px;
+    margin-block: 20px;
   }
   .itemV {
     width: 1023px;
     margin-bottom: 15px;
   }
   .itemH {
-    width: 600px;
+    width: 582px;
     margin-bottom: 15px;
+  }
+  h2{
+    font-size: 18px;
+    font-weight: 300;
   }
   .title {
     font-weight: medium;
-    font-size: 24px;
+    font-size: 18px;
     font-family: Montserrat;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     background-color: #ff6060;
-    border-radius: 25px;
-    height: 80px;
+    border-radius: 10px;
+    height: 52px;
     padding-inline: 10px;
     color: #ffffff;
   }
   .content {
-    font-size: 24px;
+    font-size: 18px;
     font-family: Montserrat;
     color: #ff6060;
     max-height: 0;
     overflow: hidden;
+    border-radius: 0px 0px 10px 10px;
     transition: all 0.5s cubic-bezier(0, 1, 0, 1);
   }
   .content.show {
     background-color: #f6f6f6;
-    padding-top: 25px;
-    font-size: 24px;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 18px;
     font-family: Montserrat;
     color: #ff6060;
     height: auto;
     max-height: 9999px;
     transition: all 0.5s cubic-bezier(1, 0, 0, 0);
     white-space: pre-line;
+    padding: 10px;
   }
   @media (max-width: 768px) {
     margin-block: 0px;

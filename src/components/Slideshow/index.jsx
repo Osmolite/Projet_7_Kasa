@@ -1,4 +1,17 @@
 import { useState } from "react";
+import styled from "styled-components";
+
+const SliderStyles = styled.div `
+    p {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -40px;
+      font-family: Montserrat;
+      color: #FFFFFF;
+      font-size: 18px;
+    }
+`
 
 const slideStyles = {
   width: "100%",
@@ -35,17 +48,6 @@ const sliderStyles = {
   height: "100%",
 };
 
-const dotsContainerStyles = {
-  display: "flex",
-  justifyContent: "center",
-};
-
-const dotStyle = {
-  margin: "0 3px",
-  cursor: "pointer",
-  fontSize: "20px",
-};
-
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
@@ -58,15 +60,13 @@ const ImageSlider = ({ slides }) => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
   const slideStylesWidthBackground = {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex]})`,
   };
-
+  console.log(currentIndex)
   return (
+    
     <div style={sliderStyles}>
       <div>
         <div onClick={goToPrevious} style={leftArrowStyles}>
@@ -77,18 +77,9 @@ const ImageSlider = ({ slides }) => {
         </div>
       </div>
       <div style={slideStylesWidthBackground}></div>
-      <div style={dotsContainerStyles}>
-        {slides.map((slide, slideIndex) => (
-          <div
-            style={dotStyle}
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-          >
-            ●
-          </div>
-        ))}
+      <SliderStyles><p className="index">{currentIndex+1}/{slides.length}</p></SliderStyles>
       </div>
-    </div>
+      
   );
 };
 
