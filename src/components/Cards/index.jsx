@@ -28,7 +28,7 @@ const CardsStyle = styled.span`
   }
   @media (max-width: 768px) {
     background-color: #FFFFFF;
-    margin-top: 0px;
+    margin-top: -40px;
   }
 `
 // const [logements, setLogements] = useState([])

@@ -13,7 +13,8 @@ const CollapseStyle = styled.span`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-block: 200px;
+    margin-top: 60px;
+    margin-bottom: 30px;
   }
   .accordionH {
     display: flex;
@@ -65,20 +66,21 @@ const CollapseStyle = styled.span`
     max-height: 9999px;
     transition: all 0.5s cubic-bezier(1, 0, 0, 0);
     white-space: pre-line;
-    padding: 10px;
+    padding: 20px;
   }
   @media (max-width: 768px) {
     margin-block: 0px;
     width:333px;
     .accordionV{
-      margin-block: 90px;
+      margin-top: 30px;
+      margin-bottom: 175px;
     }
     .itemV {
       width: 335px;
       margin-bottom: 15px;
     }
     .accordionH {
-      margin-block: 0px;
+      margin-block: 12px;
       display: flex;
       flex-direction: column;
       justify-content: center;

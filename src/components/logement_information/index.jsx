@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import Collapse from "../Collapse";
+import styled from 'styled-components'
+import Collapse from '../Collapse'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ImageSlider from "../Slideshow";
+import ImageSlider from '../Slideshow'
 
-const InfoStyle = styled.span `
+const InfoStyle = styled.span`
     font-family: Montserrat;
     color: #FF6060;
     width: 1240px;
@@ -62,7 +62,7 @@ const InfoStyle = styled.span `
         padding-top: 5px;
         background-color: #FF6060;
         color: #FFFFFF;
-        border-radius: 25px;
+        border-radius: 10px;
         text-align: center;
     }
     .rating{
@@ -72,73 +72,121 @@ const InfoStyle = styled.span `
     .star {
         margin-inline: 5px;
     }
+    
     @media (max-width: 768px) {
-        margin 0px;
-        width: 400px;
+        margin 0 auto;
+        width: 335px;
         .descriptionEtOwner{
             flex-direction:column;
+            width: 335px;
+        }
+        h1 {
+            font-size: 18px;
+            font-weight: 300;
+        }
+        h3 {
+            font-size: 14px;
+            font-weight: 300;
+        }
+        .name{
+            font-size: 12px;
+        }
+        img{
+            height: 32px;
+            width: 32px;
+        }
+        .tag{
+            font-size: 10px;
+            width: 84px;
+            height: 18px;
+        }
+        .rating{
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .owner {
+            flex-direction: row-reverse;
+            justify-content: space-between;
         }
     }
 `
-
-function Info ({ title, location, description, host, tags, rating, equipments, pictures }) {
-    const infoCollapse = [
-        {
-            title: 'Description',
-            content: `${description}`,
-        },
-        {
-            title: 'Equipements',
-            content: `${equipments}`,
+const ContainerStyles = styled.div`
+        width: 1240px;
+        height: 415px;
+        margin: 0 auto;
+        @media (max-width: 768px) {
+            width: 335px;
+            height: 255px;
         }
-      ]
-      console.log(infoCollapse)
-      console.log(tags)
-      const rows = [];
-        for (let i = 0; i < 5; i++) {
-            console.log(i,rating);
-            if (i<rating){
-                rows.push(<FontAwesomeIcon icon="fa-solid fa-star" />)
-            }else{
-                rows.push(<FontAwesomeIcon icon="fa-solid fa-star" style={{color: "#b0b0b0",}} />)
-            };
-        }
-        const containerStyles = {
-            width: "1240px",
-            height: "415px",
-            margin: "0 auto",
-          };
-          const name = host.name.replace(' ', '\n')
-    return (
-        <InfoStyle>
-        <div style={containerStyles}>
-        <ImageSlider slides={pictures}/>
-        </div>
-        <div className="descriptionEtOwner">
+`
+function Info({
+  title,
+  location,
+  description,
+  host,
+  tags,
+  rating,
+  equipments,
+  pictures,
+}) {
+  const infoCollapse = [
+    {
+      title: 'Description',
+      content: `${description}`,
+    },
+    {
+      title: 'Equipements',
+      content: `${equipments}`,
+    },
+  ]
+  console.log(infoCollapse)
+  console.log(tags)
+  const rows = []
+  for (let i = 0; i < 5; i++) {
+    console.log(i, rating)
+    if (i < rating) {
+      rows.push(<FontAwesomeIcon icon="fa-solid fa-star" />)
+    } else {
+      rows.push(
+        <FontAwesomeIcon icon="fa-solid fa-star" style={{ color: '#b0b0b0' }} />
+      )
+    }
+  }
+  const name = host.name.replace(' ', '\n')
+  return (
+    <InfoStyle>
+      <ContainerStyles>
+        <ImageSlider slides={pictures} />
+      </ContainerStyles>
+      <div className="descriptionEtOwner">
         <div className="information">
-        <h1>{title}</h1>
-        <h3 className="location">{location}</h3>
-        <div className="tags">
-        {tags.map((tag,i)=>(
-            <p className="tag" key={i}>{tag}</p>
+          <h1>{title}</h1>
+          <h3 className="location">{location}</h3>
+          <div className="tags">
+            {tags.map((tag, i) => (
+              <p className="tag" key={i}>
+                {tag}
+              </p>
             ))}
-        </div>
+          </div>
         </div>
         <div className="owner">
-            <div className="ownerIn">
+          <div className="ownerIn">
             <h3 className="name">{name}</h3>
-            <img src={host.picture} alt='Propriétaire du logement'></img>
-            </div>
-            <div className="rating">
-            {rows.map((row,i)=>(
-                <div className="star" key={i}>{row}</div>
-                ))}
-            </div>
-            </div>
-            </div>
-            
-            <Collapse data = {infoCollapse} verticale = {false} />
-        </InfoStyle>
-    )
+            <img src={host.picture} alt="Propriétaire du logement"></img>
+          </div>
+          <div className="rating">
+            {rows.map((row, i) => (
+              <div className="star" key={i}>
+                {row}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <Collapse data={infoCollapse} verticale={false} />
+    </InfoStyle>
+  )
 }
-export default Info;
+export default Info

@@ -1,6 +1,6 @@
 import GlobalFonts from '../../fonts/fonts';
 import Header from '../../components/Header/index.jsx'
-import Banner from '../../components/Banner/index.jsx'
+import BannerAbout from '../../components/BannerAbout/index.jsx'
 import Footer from '../../components/Footer/index.jsx'
 import Collapse from '../../components/Collapse/index.jsx'
 
@@ -9,7 +9,7 @@ function About() {
     <div >
       <GlobalFonts/>
       <Header/>
-      <Banner/>
+      <BannerAbout/>
       <Collapse data={infoPageAbout} verticale={true}/>
       <Footer/>
     </div>

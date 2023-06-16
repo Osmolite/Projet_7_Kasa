@@ -12,7 +12,6 @@ const FooterStyle = styled.span`
     align-items: center;
     background-color:#000000;
     color: #FFFFFF;
-    width: 100%;
     margin-top:40px;
     padding-block: 30px;
     img {
@@ -22,13 +21,14 @@ const FooterStyle = styled.span`
     }
     @media (max-width: 768px) {
         img {
-            width:105px;
+            width:130px;
             height:45px;
+            object-fit:cover;
         }
         font-size: 12px;
         
       }
-    
+      margin-top:80px;
 }
 
 
@@ -39,7 +39,7 @@ const FooterStyle = styled.span`
 
 function Footer () {
     return (
-        <FooterStyle className='header'>
+        <FooterStyle>
         <img className="logo" src={blackLogo} alt="Logo de l'application"></img>
         <h3 className="droits">© 2020 Kasa. All rights reserved</h3>
         </FooterStyle>

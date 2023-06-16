@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Logo from '../../assets/Logo.PNG'
 //Header présent sur toutes les pages composé du logo et du menu
 
-const HeaderStyle = styled.span`
+const HeaderStyle = styled.div`
     font-size: 24px;
     font-family: Montserrat;
     display: flex;
@@ -23,17 +23,26 @@ const HeaderStyle = styled.span`
     text-decoration: none;
     &:hover{
         text-decoration: underline;
-    }
+    }}
     @media (max-width: 768px) {
-        img {
+        width: 335px;
+        margin-inline: 10%;
+        .logo {
             height:60px;
             width:157px;
         }
-        margin-inline: 0px;
-        
+        .nav{
+            display: flex;
+            flex-direction: row;
+        }
+        .liens_Menu {
+            margin-inline: 5px;
+        }
+        font-size: 12px;
+        flex-wrap:nowrap;
       }
     
-}
+
 
 
 `

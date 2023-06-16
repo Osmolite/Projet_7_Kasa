@@ -26,6 +26,7 @@ const BannerStyle = styled.span`
             width:335px;
             height:111px;
             border-radius: 10px;
+            object-fit:cover;
         }
         .titre_banner{
             font-size:24px;
