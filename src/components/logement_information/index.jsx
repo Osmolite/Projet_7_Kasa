@@ -95,6 +95,9 @@ const InfoStyle = styled.span`
             height: 32px;
             width: 32px;
         }
+        .tags{
+          flex-wrap:wrap;
+        }
         .tag{
             font-size: 10px;
             height: 18px;

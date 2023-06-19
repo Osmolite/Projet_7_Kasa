@@ -40,6 +40,9 @@ const HeaderStyle = styled.div`
         font-size: 12px;
         flex-wrap:nowrap;
       }
+      @media (max-width: 370px) {
+        margin-inline: 4%;
+      }
     
 
 
