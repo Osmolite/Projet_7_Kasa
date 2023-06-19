@@ -4,8 +4,8 @@ import Header from '../../components/Header/index.jsx'
 import Presentation from '../../components/Presentation';
 import Footer from '../../components/Footer';
 
-function Logement() {
 
+function Logement() { 
   return (
     <div >
       <GlobalFonts/>

@@ -107,13 +107,13 @@ const CollapseStyle = styled.span`
 //Police : Montserrat regular, medium
 
 function Collapse({ data, verticale }) {
-  const [selected, setSelected] = useState(null)
+  const lengthData = data.length
+  const dataTab = new Array(lengthData).fill(false)
+  const [folded, setFolded] = useState(dataTab)
   const toggle = (i) => {
-    if (selected === i) {
-      return setSelected(null)
-    }
-
-    setSelected(i)
+      const majFolded = folded.map((item, k) => (i===k ? !item : item))
+      setFolded(majFolded)
+      console.log(folded)
   }
   return (
     <CollapseStyle>
@@ -123,14 +123,14 @@ function Collapse({ data, verticale }) {
             <div className="title" onClick={() => toggle(i)}>
               <h2>{item.title}</h2>
               <span>
-                {selected === i ? (
+                {folded[i] ? (
                   <FontAwesomeIcon icon="fa-solid fa-angle-up" />
                 ) : (
                   <FontAwesomeIcon icon="fa-solid fa-chevron-down" />
                 )}
               </span>
             </div>
-            <div className={selected === i ? 'content show' : 'content'}>
+            <div className={folded[i] ? 'content show' : 'content'}>
               {item.content}
             </div>
           </div>

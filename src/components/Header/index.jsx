@@ -2,7 +2,6 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import Logo from '../../assets/Logo.PNG'
-//Header présent sur toutes les pages composé du logo et du menu
 
 const HeaderStyle = styled.div`
     font-size: 24px;
@@ -46,9 +45,6 @@ const HeaderStyle = styled.div`
 
 
 `
-
-//Couleurs : FF6060 FFFFFF F6F6F6 000000
-//Police : Montserrat regular, medium
 
 function Header () {
     return (

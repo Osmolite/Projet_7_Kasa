@@ -6,6 +6,9 @@ import { useParams } from 'react-router-dom'
 function Presentation() {
   let { id } = useParams()
   const logementCourant = logements.find((element) => element.id === id)
+  if (typeof logementCourant==='undefined') {
+    window.location.href='/ErrorPage'
+  }
   return (
     <Info
       title={logementCourant.title}

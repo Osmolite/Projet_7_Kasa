@@ -56,10 +56,10 @@ const InfoStyle = styled.span`
     }
     .tag{
         font-size: 14px;
-        width: 115px;
         height: 25px;
         margin-inline: 5px;
         padding-top: 5px;
+        padding-inline: 10px;
         background-color: #FF6060;
         color: #FFFFFF;
         border-radius: 10px;
@@ -97,7 +97,6 @@ const InfoStyle = styled.span`
         }
         .tag{
             font-size: 10px;
-            width: 84px;
             height: 18px;
         }
         .rating{
