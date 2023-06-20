@@ -1,9 +1,8 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import blackLogo from '../../assets/blackLogo.png'
 
-const FooterStyle = styled.span`
+const FooterStyle = styled.footer`
     font-size: 24px;
     font-family: Montserrat;
     display: flex;

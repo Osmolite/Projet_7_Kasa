@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import banner from '../../assets/banner.png'
 //Bannière de l'image pour la page Home et About
 
-const BannerStyle = styled.span`
+const BannerStyle = styled.div`
     
     display: flex;
     flex-direction: column;

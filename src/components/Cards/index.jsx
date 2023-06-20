@@ -5,7 +5,7 @@ import logements from '../../datas/logements.json'
 import Card from '../Card/index.jsx'
 
 
-const CardsStyle = styled.span`
+const CardsStyle = styled.main`
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;

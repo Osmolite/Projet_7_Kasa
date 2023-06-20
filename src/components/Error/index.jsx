@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import ErrorImage from '../../assets/ErrorImage.png'
-import { Link } from "react-router-dom"
+import { Link, useRouteError } from "react-router-dom"
 //import image from './image.png'
 //Erreur 404
 
-const ErrorStyle = styled.span`
+const ErrorStyle = styled.main`
     display:flex;
     justify-content:center;
     flex-direction: column;
@@ -46,9 +46,11 @@ const ErrorStyle = styled.span`
 //Police : Montserrat regular, medium
 
 function Error () {
+    const error= useRouteError();
     return (
         <ErrorStyle>
         <img src={ErrorImage} alt="Erreur 404"/>
+        <p>{error.message}</p>
         <h1 className="messageErreur">Oups! La page que<br/> vous demandez n'existe pas.</h1>
         <Link to='/' className='retourAccueil'>Retourner sur la page d'accueil</Link>
         </ErrorStyle>

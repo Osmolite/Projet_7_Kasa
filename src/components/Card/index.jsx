@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const CardStyle = styled.span`
+const CardStyle = styled.section`
     font-size: 18px;
     font-family: 'Montserrat';
     height:340px;

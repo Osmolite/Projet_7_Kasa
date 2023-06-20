@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import Collapse from '../Collapse'
+import CollapseList from '../CollapseList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ImageSlider from '../Slideshow'
 
-const InfoStyle = styled.span`
+const InfoStyle = styled.main`
     font-family: Montserrat;
     color: #FF6060;
     width: 1240px;
@@ -187,7 +187,7 @@ function Info({
         </div>
       </div>
 
-      <Collapse data={infoCollapse} verticale={false} />
+      <CollapseList data={infoCollapse} verticale={false} />
     </InfoStyle>
   )
 }

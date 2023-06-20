@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import Logo from '../../assets/Logo.PNG'
 
-const HeaderStyle = styled.div`
+const HeaderStyle = styled.header`
     font-size: 24px;
     font-family: Montserrat;
     display: flex;
@@ -53,10 +53,10 @@ function Header () {
     return (
         <HeaderStyle className='header'>
         <img className="logo" src={Logo} alt="Logo de l'application"></img>
-        <div className="nav">
+        <nav className="nav">
             <Link className="liens_Menu" to="/">Accueil</Link>
             <Link className="liens_Menu" to="/About">A Propos</Link>
-        </div>
+        </nav>
         </HeaderStyle>
     )
 }

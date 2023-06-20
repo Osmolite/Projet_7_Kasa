@@ -2,7 +2,7 @@ import GlobalFonts from '../../fonts/fonts';
 import Header from '../../components/Header/index.jsx'
 import BannerAbout from '../../components/BannerAbout/index.jsx'
 import Footer from '../../components/Footer/index.jsx'
-import Collapse from '../../components/Collapse/index.jsx'
+import CollapseList from '../../components/CollapseList/index.jsx'
 
 function About() {
   return (
@@ -10,7 +10,7 @@ function About() {
       <GlobalFonts/>
       <Header/>
       <BannerAbout/>
-      <Collapse data={infoPageAbout} verticale={true}/>
+      <CollapseList data={infoPageAbout} verticale={true}/>
       <Footer/>
     </div>
   );
