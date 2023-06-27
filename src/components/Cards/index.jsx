@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import logements from '../../datas/logements.json'
 import Card from '../Card/index.jsx'
 
+//Crée une liste de toutes les Card en y ajoutant un lien vers le logement qui correspond
 
 const CardsStyle = styled.main`
   display: flex;

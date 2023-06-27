@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import ErrorImage from '../../assets/ErrorImage.png'
 import { Link } from "react-router-dom"
-//import image from './image.png'
-//Erreur 404
+
+//Composant qui est affiché lors d'une erreur sur l'application
 
 const ErrorStyle = styled.main`
     display:flex;

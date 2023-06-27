@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import banner from '../../assets/banner.png'
-//Bannière de l'image pour la page Home et About
+
+//Bannière de la page Accueil
 
 const BannerStyle = styled.div`
     
@@ -42,8 +43,6 @@ const BannerStyle = styled.div`
         }
       }
 `
-//Couleurs : FF6060 FFFFFF F6F6F6 000000
-//Police : Montserrat regular, medium
 
 function Banner () {
     return (

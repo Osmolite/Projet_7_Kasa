@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import Logo from '../../assets/Logo.PNG'
 
+//Logo et menu de navigation du site en haut des pages
+
 const HeaderStyle = styled.header`
     font-size: 24px;
     font-family: Montserrat;

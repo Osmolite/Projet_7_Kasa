@@ -4,6 +4,7 @@ import Header from '../../components/Header/index.jsx'
 import Presentation from '../../components/Presentation';
 import Footer from '../../components/Footer';
 
+//Page affichant toutes les informations du logement sur lequel l'utilisateur a cliqué
 
 function Logement() { 
   return (

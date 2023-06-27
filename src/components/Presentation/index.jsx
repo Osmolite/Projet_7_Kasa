@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import styled from 'styled-components'
 
+//Composant qui gère l'affichage des informations sur la page logement, soit avec l'envoi des informations du logement, un loader ou une redirection vers la page erreur
+
 const Loader = styled.div`
   margin-inline: 48%;
   margin-block: 250px;

@@ -4,6 +4,8 @@ import BannerAbout from '../../components/BannerAbout/index.jsx'
 import Footer from '../../components/Footer/index.jsx'
 import CollapseList from '../../components/CollapseList/index.jsx'
 
+//Page affichant les informations complémentaires de l'application
+
 function About() {
   return (
     <div >

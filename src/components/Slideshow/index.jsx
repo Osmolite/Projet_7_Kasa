@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 
+//Composant qui crée le caroussel d'image sur la page logement 
+
 const SliderStyles = styled.div `
     p {
       display:flex;

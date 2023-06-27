@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 
+//Crée une liste déroulante 
+
 function Collapse({ data, verticale }) {
 const [selected, setSelected] = useState(false)
 

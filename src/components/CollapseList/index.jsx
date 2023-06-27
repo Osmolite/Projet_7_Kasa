@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 import Collapse from '../Collapse/index.jsx'
-//import image from './image.png'
-//import logements from './data/logements.json'
-//Carrousel (Texte déroulant sur la page product et about)
-//https://codepen.io/kunukn/pen/ebMryW
-//https://codepen.io/diabloo/pen/bGdVgbP
+
+//Applique du style sur les composants Collapse et crée une liste avec toutes les listes déroulantes nécessaire
 
 const CollapseListStyle = styled.span`
   .accordionV {

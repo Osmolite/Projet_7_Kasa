@@ -2,6 +2,8 @@ import * as React from "react";
 import styled from 'styled-components'
 import blackLogo from '../../assets/blackLogo.png'
 
+//Logo et droits du site en bas des pages
+
 const FooterStyle = styled.footer`
     font-size: 24px;
     font-family: Montserrat;

@@ -4,6 +4,7 @@ import Banner from '../../components/Banner/index.jsx'
 import Cards from '../../components/Cards/index.jsx'
 import Footer from '../../components/Footer/index.jsx'
 
+//Page d'accueil présentant tous les logements disponibles
 
 function Home() {
   return (

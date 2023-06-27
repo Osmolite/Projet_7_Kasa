@@ -3,6 +3,8 @@ import CollapseList from '../CollapseList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ImageSlider from '../Slideshow'
 
+//Composant qui crée toutes les balises et le style nécessaire au bon affichage des informations du logement
+
 const InfoStyle = styled.main`
     font-family: Montserrat;
     color: #FF6060;

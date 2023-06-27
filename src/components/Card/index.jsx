@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+//Crée une carte logement en superposant le titre, la photo et un dégradé 
+
 const CardStyle = styled.section`
     font-size: 18px;
     font-family: 'Montserrat';
@@ -48,17 +50,7 @@ const CardStyle = styled.section`
         }
       }
 `
-// .shadow {
-//     height:340px;
-//     width:340px;
-//     background: linear-gradient(white, black);
-//     opacity: 0.1;
-//     border-radius: 25px;
-// }
-//Couleurs : FF6060 FFFFFF F6F6F6 000000
-//Police : Montserrat regular, medium
 
-//Utilisation de la méthode map pour connecter le fichier json 
 function Card ({ title, cover }) {
     return (
         <CardStyle className='card_item'>
