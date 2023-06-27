@@ -1,6 +1,6 @@
 import Info from '../logement_information'
 import logements from '../../datas/logements.json'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import styled from 'styled-components'
@@ -33,13 +33,15 @@ const Loader = styled.div`
 function Presentation() {
   let { id } = useParams()
   const [logementCourant, setLogementCourant] = useState(null)
+  const navigate= useNavigate();
   useEffect(() => {
     const monLogement = logements.find((element) => element.id === id)
     setLogementCourant(monLogement)
   }, [])
   // const logementCourant = logements.find((element) => element.id === id)
   if (typeof logementCourant === 'undefined') {
-    window.location.href = '/ErrorPage'
+    // window.location.href = '/ErrorPage'
+    navigate("/ErrorPage");
   }
   if (logementCourant == null) {
     return <Loader></Loader>
