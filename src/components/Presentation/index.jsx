@@ -1,35 +1,59 @@
 import Info from '../logement_information'
 import logements from '../../datas/logements.json'
-import { json, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 import { useEffect } from 'react'
-//Contient Slideshow, Tag ainsi que le titre, la localisation du logement et Owner dans la page Product
+import styled from 'styled-components'
+
+const Loader = styled.div`
+  margin-inline: 48%;
+  margin-block: 250px;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #FF6060;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @media (max-width: 768px) {
+    margin-inline : 38%;
+    margin-block: 275px;
+  }
+`
 
 function Presentation() {
   let { id } = useParams()
   const [logementCourant, setLogementCourant] = useState(null)
-  useEffect(()=> {
+  useEffect(() => {
     const monLogement = logements.find((element) => element.id === id)
     setLogementCourant(monLogement)
-  },[])
+  }, [])
   // const logementCourant = logements.find((element) => element.id === id)
-  if (typeof logementCourant==='undefined') {
-    window.location.href='/ErrorPage'
+  if (typeof logementCourant === 'undefined') {
+    window.location.href = '/ErrorPage'
   }
-  if (logementCourant==null) {
-    return <div></div>
+  if (logementCourant == null) {
+    return <Loader></Loader>
   } else {
-  return (
-    <Info
-      title={logementCourant.title}
-      location={logementCourant.location}
-      description={logementCourant.description}
-      host={logementCourant.host}
-      tags={logementCourant.tags}
-      rating={logementCourant.rating}
-      equipments={logementCourant.equipments.join("\n")}
-      pictures={logementCourant.pictures}
-    ></Info>
-  )}
+    return (
+      <Info
+        title={logementCourant.title}
+        location={logementCourant.location}
+        description={logementCourant.description}
+        host={logementCourant.host}
+        tags={logementCourant.tags}
+        rating={logementCourant.rating}
+        equipments={logementCourant.equipments.join('\n')}
+        pictures={logementCourant.pictures}
+      ></Info>
+    )
+  }
 }
 export default Presentation
