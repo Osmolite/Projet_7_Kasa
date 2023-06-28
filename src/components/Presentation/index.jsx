@@ -38,9 +38,7 @@ function Presentation() {
     const monLogement = logements.find((element) => element.id === id)
     setLogementCourant(monLogement)
   }, [])
-  // const logementCourant = logements.find((element) => element.id === id)
   if (typeof logementCourant === 'undefined') {
-    // window.location.href = '/ErrorPage'
     navigate("/ErrorPage");
   }
   if (logementCourant == null) {

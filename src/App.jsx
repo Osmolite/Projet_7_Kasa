@@ -10,7 +10,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fas)
 
-//Création des routes de navigation entre les différentes pages de l'application
+//Création des routes de navigation entre les différentes pages de l'application avec React router dom
 
 function App () {
     return (
